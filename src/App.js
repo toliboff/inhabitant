@@ -4,6 +4,7 @@ import { fetchStreets } from './store/reducers/streets';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchHouses } from './store/reducers/houses';
 import { fetchFlats } from './store/reducers/flats';
+import { fetchInhabitants } from './store/reducers/inhabitants';
 
 function App() {
   const dispatch = useDispatch();
@@ -25,7 +26,7 @@ function App() {
     console.log('House id: ',id);
   };
   const handleFlatChange = (id) => {
-    // dispatch(fetchHouses(id));
+    dispatch(fetchInhabitants(id));
     console.log('Flat id: ',id);
   };
 
